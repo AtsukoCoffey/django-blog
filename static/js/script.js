@@ -1,0 +1,1 @@
+console.log("Say something in the console. Life, The Universe and Everything!")
