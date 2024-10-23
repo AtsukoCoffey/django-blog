@@ -4,9 +4,12 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 # Register your models here.
-# admin.site.register(About)
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Register the model into admin site. Instead of admin.site.register(About)
+    Use decorator @admin and class based model to use Summernote.
+    """
     summernote_fields = ('content',)
 
 
@@ -18,4 +21,8 @@ class AboutAdmin(SummernoteModelAdmin):
 #       we do below.
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
+    """
+    Register the Collaborate request message model into admin site.
+    Use decorator @admin and class based model to use Summernote.
+    """
     list_display = ('message', 'read')
